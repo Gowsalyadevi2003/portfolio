@@ -3,18 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gowsalya Devi V | DevOps & Cloud Engineer</title>
+    <title>Gowsalya Devi V | Associate DevOps Engineer</title>
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-primary: #38bdf8;
-            --accent-secondary: #818cf8;
-            --accent-border: #334155;
-        }
-
+        /* Base Reset & Variables */
         * {
             margin: 0;
             padding: 0;
@@ -22,232 +13,358 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        :root {
+            --primary-color: #2563eb;
+            --dark-color: #0f172a;
+            --light-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --text-heading: #1e293b;
+            --border-color: #e2e8f0;
+        }
+
         body {
-            background-color: var(--bg-color);
+            background-color: var(--light-bg);
             color: var(--text-color);
             line-height: 1.6;
-            padding: 2rem 1rem;
         }
 
+        /* Container */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        header {
-            text-align: center;
-            padding: 3rem 1.5rem;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border: 1px solid var(--accent-border);
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        /* Navigation */
+        nav {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        h1 {
-            font-size: 2.5rem;
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
             color: var(--text-color);
-            margin-bottom: 0.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--accent-primary);
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-text h1 {
+            font-size: 2.2rem;
+            color: var(--text-heading);
+            margin-bottom: 5px;
+        }
+
+        .hero-text h2 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
         }
 
         .contact-info {
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
+            gap: 15px;
             flex-wrap: wrap;
-            color: var(--text-muted);
+            margin-top: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Section Global */
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section h2 {
+            font-size: 1.6rem;
+            color: var(--text-heading);
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            font-weight: 500;
             font-size: 0.95rem;
         }
 
-        .contact-info a {
-            color: var(--accent-primary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent-secondary);
-        }
-
-        section {
-            background-color: var(--card-bg);
-            border: 1px solid var(--accent-border);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            color: var(--accent-primary);
-            border-bottom: 2px solid var(--accent-border);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 0.75rem;
-        }
-
-        .skill-tag {
-            background-color: #0f172a;
-            color: var(--text-color);
-            padding: 0.5rem 1rem;
+        /* Cards Layout */
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
             border-radius: 8px;
-            font-size: 0.9rem;
-            text-align: center;
-            border: 1px solid var(--accent-border);
-            transition: transform 0.2s, border-color 0.2s;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
         }
 
-        .skill-tag:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent-primary);
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
         }
 
-        .job-title {
+        .card-title {
             font-size: 1.15rem;
-            font-weight: bold;
-            color: var(--text-color);
+            color: var(--text-heading);
         }
 
-        .job-meta {
-            color: var(--accent-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
+        .card-subtitle {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .card-date {
+            font-size: 0.85rem;
+            color: #64748b;
         }
 
         ul {
-            list-style-type: disc;
-            padding-left: 1.25rem;
-            color: var(--text-muted);
+            padding-left: 20px;
         }
 
         li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 8px;
         }
 
-        .project-card {
-            background-color: #0f172a;
-            padding: 1.25rem;
+        /* Image Gallery for Achievements & Projects */
+        .image-gallery {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            max-width: 380px;
+            height: 240px;
+            object-fit: cover;
             border-radius: 8px;
-            border: 1px solid var(--accent-border);
-            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        .project-card h3 {
-            color: var(--text-color);
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
+        /* Footer */
         footer {
+            padding: 30px 0;
             text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: 2rem;
+            background-color: var(--card-bg);
+            font-size: 0.9rem;
+            color: #64748b;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header / Hero -->
-        <header>
-            <h1>GOWSALYA DEVI V</h1>
-            <div class="subtitle">DevOps & Cloud Engineer</div>
-            <div class="contact-info">
-                <span>📍 Coimbatore / Pune</span>
-                <span>📞 +91 7305568086</span>
-                <span>✉️ <a href="mailto:vgowsalya2003@gmail.com">vgowsalya2003@gmail.com</a></span>
-                <span>🔗 <a href="https://linkedin.com/in/gowsalya-devi-v-b635b4239" target="_blank">LinkedIn</a></span>
-                <span>💻 <a href="https://github.com" target="_blank">GitHub</a></span>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <div class="logo">Gowsalya Devi V</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="about">
+        <div class="container">
+            <div class="hero-content">
+                <img src="images/profile.jpg" alt="Gowsalya Devi V" class="profile-img">
+                <div class="hero-text">
+                    <h1>GOWSALYA DEVI V</h1>
+                    <h2>Associate DevOps Engineer</h2>
+                    <p>Associate DevOps Engineer with 15 months of experience building, monitoring, and optimizing CI/CD pipelines across GitHub Actions, Jenkins, and Azure DevOps. Leveraging an EEE analytical foundation to solve cloud infrastructure bottlenecks.</p>
+                    <div class="contact-info">
+                        <a href="https://linkedin.com/in/gowsalya-devi-v-b635b4239" target="_blank" class="btn">LinkedIn</a>
+                        <a href="mailto:vgowsalya2003@gmail.com" class="btn" style="background-color: #475569;">Email Me</a>
+                    </div>
+                </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- Summary -->
-        <section>
-            <h2>About Me</h2>
-            <p style="color: var(--text-muted);">
-                Associate DevOps Engineer with 15 months of hands-on experience building, monitoring, and optimizing CI/CD pipelines across GitHub Actions, Jenkins, and Azure DevOps. Leveraging an Electrical and Electronics Engineering (EEE) analytical foundation to solve complex cloud infrastructure bottlenecks.
-            </p>
-        </section>
-
-        <!-- Tech Stack -->
-        <section>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-tag">GitHub Actions</div>
-                <div class="skill-tag">Jenkins</div>
-                <div class="skill-tag">Azure DevOps</div>
-                <div class="skill-tag">Kubernetes (K8s)</div>
-                <div class="skill-tag">Istio</div>
-                <div class="skill-tag">Docker</div>
-                <div class="skill-tag">Terraform</div>
-                <div class="skill-tag">AWS</div>
-                <div class="skill-tag">Azure Cloud</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">Bash / Shell</div>
-                <div class="skill-tag">Atlassian JIRA</div>
-                <div class="skill-tag">Confluence</div>
+                <div class="skill-card">GitHub Actions</div>
+                <div class="skill-card">Azure Pipelines</div>
+                <div class="skill-card">Jenkins</div>
+                <div class="skill-card">Kubernetes (K8s)</div>
+                <div class="skill-card">Terraform</div>
+                <div class="skill-card">AWS</div>
+                <div class="skill-card">Docker / ACR</div>
+                <div class="skill-card">Istio</div>
+                <div class="skill-card">Git / GitHub</div>
+                <div class="skill-card">Bash / Shell</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Atlassian JIRA</div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Work History -->
-        <section>
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
             <h2>Work Experience</h2>
-            <div>
-                <div class="job-title">Associate DevOps Engineer</div>
-                <div class="job-meta">Finastra, Pune | 06/2025 – Present</div>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Associate DevOps Engineer</h3>
+                        <span class="card-subtitle">Finastra — Pune</span>
+                    </div>
+                    <span class="card-date">06/2025 – Present</span>
+                </div>
                 <ul>
-                    <li>Built GitHub Actions workflows monitoring 50+ pipelines, automatically triggering incident tickets to reduce MTTR by 35%.</li>
+                    <li>Built GitHub Actions workflows to monitor 50+ Jenkins and Azure DevOps pipelines, automatically triggering Jira/ServiceNow tickets upon failure to reduce MTTR by 35%.</li>
                     <li>Automated release note generation and publishing directly to Confluence, saving 5+ hours per release cycle.</li>
-                    <li>Configured Azure Container Registry (ACR) and managed multi-branch Git workflows to ensure 99.9% deployment reliability.</li>
+                    <li>Configured Azure Container Registry (ACR) and managed multi-branch Git workflows across feature, bugfix, and main branches ensuring 99.9% deployment reliability.</li>
                     <li>Refactored legacy Jenkinsfiles and automated database report generation using Oracle AWR to accelerate build execution speed by 25%.</li>
                 </ul>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Featured Projects -->
-        <section>
-            <h2>Featured Projects</h2>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
             
-            <div class="project-card">
-                <h3>Automated TPAT Release Notes Pipeline</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">
-                    Developed an automated workflow fetching build release logs across Jenkins and Azure DevOps to automatically publish updated TPAT release notes directly to Atlassian Confluence.
-                </p>
+            <div class="card">
+                <h3 class="card-title">Automated TPAT Release Notes Pipeline</h3>
+                <p>Developed an automated workflow fetching build release logs across Jenkins and Azure DevOps to automatically publish updated TPAT release notes directly to Atlassian Confluence.</p>
             </div>
 
-            <div class="project-card">
-                <h3>Kubernetes Deployment with Istio Service Mesh</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">
-                    Configured microservices deployment on Kubernetes clusters, establishing traffic management and canary release routing rules using Istio VirtualServices.
-                </p>
+            <div class="card">
+                <h3 class="card-title">Kubernetes Deployment with Istio Service Mesh</h3>
+                <p>Configured microservices deployment on Kubernetes clusters, establishing traffic management and canary release routing rules using Istio VirtualServices.</p>
             </div>
 
-            <div class="project-card">
-                <h3>Automated Static Website Hosting with Terraform on AWS</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">
-                    Automated infrastructure provisioning for AWS S3 static website hosting utilizing reusable IaC Terraform modules.
-                </p>
+            <div class="card">
+                <h3 class="card-title">Arduino-Based Women Safety Device</h3>
+                <p>Designed and built an IoT hardware prototype using Arduino, GPS/GSM modules, and alert triggers for real-time tracking and emergency signaling.</p>
+                <div class="image-gallery">
+                    <img src="images/women-safety-project.jpg" alt="Arduino Hardware Setup" class="gallery-img">
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>© Gowsalya Devi V — DevOps & Cloud Engineer</p>
-        </footer>
-    </div>
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <h2>Academic Topper & Honors</h2>
+            <div class="card">
+                <h3 class="card-title">University Top Ranker — EEE Department</h3>
+                <p>Graduated with <strong>First Class with Distinction (GPA: 8.64 / 10.0)</strong> from Sri Eshwar College of Engineering, securing the Top Rank for overall academic excellence and dedication.</p>
+                <div class="image-gallery">
+                    <img src="images/academic-award.jpg" alt="Receiving Trophy on Stage" class="gallery-img">
+                    <img src="images/university-rank-cert.jpg" alt="Official University Topper Certificate" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Gowsalya Devi V. Built with HTML & CSS.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
