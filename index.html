@@ -2,207 +2,252 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new resume</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://unpkg.com/feather-icons"></script>
-    
-    
+    <title>Gowsalya Devi V | DevOps & Cloud Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-primary: #38bdf8;
+            --accent-secondary: #818cf8;
+            --accent-border: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid var(--accent-border);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-secondary);
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+            border-bottom: 2px solid var(--accent-border);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background-color: #0f172a;
+            color: var(--text-color);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            text-align: center;
+            border: 1px solid var(--accent-border);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-primary);
+        }
+
+        .job-title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .job-meta {
+            color: var(--accent-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-card {
+            background-color: #0f172a;
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--accent-border);
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
-<div class="profile">
-    <div class="profile_container">
-        <div class="profile_profileimage"></div>
-        <image class="circle" src="WhatsApp Image 2023-06-11 at 2.18.02 PM (1).jpeg" width="200"height="200" ></image>
-<div>
-    <h1 class="profile_name">
-        <span class="firstname">Gowsalya</span> 
-        <span class="lastname">devi</span>
-    </h1>
-    <p class="profile_title">Software Engineer</p>
-    <br>
-    <br>
-    <h3 class="domain_title">CARRIER OBJECTIVE</h3>
-    <p class="description">To work in a challenging environment assisting in the growth of the organization and to keep on 
-    improving my skills and knowledge.</p>
-    
-</div>
-    </div>
-</div>
-<div class="group-1">
-    <div class="skills">
-      <h3 class="title">EXPERTISE</h3>
-      <ul class="skills_list description">
-        <li>C</li>
-        <li>JAVA</li>
-        <li>HTML CSS</li>
-        <li>DBMS</li>
-        <li>MERN STACK</li>
-      </ul>
+        <!-- Header / Hero -->
+        <header>
+            <h1>GOWSALYA DEVI V</h1>
+            <div class="subtitle">DevOps & Cloud Engineer</div>
+            <div class="contact-info">
+                <span>📍 Coimbatore / Pune</span>
+                <span>📞 +91 7305568086</span>
+                <span>✉️ <a href="mailto:vgowsalya2003@gmail.com">vgowsalya2003@gmail.com</a></span>
+                <span>🔗 <a href="https://linkedin.com/in/gowsalya-devi-v-b635b4239" target="_blank">LinkedIn</a></span>
+                <span>💻 <a href="https://github.com" target="_blank">GitHub</a></span>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section>
+            <h2>About Me</h2>
+            <p style="color: var(--text-muted);">
+                Associate DevOps Engineer with 15 months of hands-on experience building, monitoring, and optimizing CI/CD pipelines across GitHub Actions, Jenkins, and Azure DevOps. Leveraging an Electrical and Electronics Engineering (EEE) analytical foundation to solve complex cloud infrastructure bottlenecks.
+            </p>
+        </section>
+
+        <!-- Tech Stack -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">GitHub Actions</div>
+                <div class="skill-tag">Jenkins</div>
+                <div class="skill-tag">Azure DevOps</div>
+                <div class="skill-tag">Kubernetes (K8s)</div>
+                <div class="skill-tag">Istio</div>
+                <div class="skill-tag">Docker</div>
+                <div class="skill-tag">Terraform</div>
+                <div class="skill-tag">AWS</div>
+                <div class="skill-tag">Azure Cloud</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">Bash / Shell</div>
+                <div class="skill-tag">Atlassian JIRA</div>
+                <div class="skill-tag">Confluence</div>
+            </div>
+        </section>
+
+        <!-- Work History -->
+        <section>
+            <h2>Work Experience</h2>
+            <div>
+                <div class="job-title">Associate DevOps Engineer</div>
+                <div class="job-meta">Finastra, Pune | 06/2025 – Present</div>
+                <ul>
+                    <li>Built GitHub Actions workflows monitoring 50+ pipelines, automatically triggering incident tickets to reduce MTTR by 35%.</li>
+                    <li>Automated release note generation and publishing directly to Confluence, saving 5+ hours per release cycle.</li>
+                    <li>Configured Azure Container Registry (ACR) and managed multi-branch Git workflows to ensure 99.9% deployment reliability.</li>
+                    <li>Refactored legacy Jenkinsfiles and automated database report generation using Oracle AWR to accelerate build execution speed by 25%.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section>
+            <h2>Featured Projects</h2>
+            
+            <div class="project-card">
+                <h3>Automated TPAT Release Notes Pipeline</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                    Developed an automated workflow fetching build release logs across Jenkins and Azure DevOps to automatically publish updated TPAT release notes directly to Atlassian Confluence.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Kubernetes Deployment with Istio Service Mesh</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                    Configured microservices deployment on Kubernetes clusters, establishing traffic management and canary release routing rules using Istio VirtualServices.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Automated Static Website Hosting with Terraform on AWS</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                    Automated infrastructure provisioning for AWS S3 static website hosting utilizing reusable IaC Terraform modules.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© Gowsalya Devi V — DevOps & Cloud Engineer</p>
+        </footer>
     </div>
 
-    <div class="group-1">
-      <div class="skills">
-        <h3 class="title">PERSONAL SKILLS</h3>
-        <ul class="skills_list description">
-          <li>Problem Solving Skills</li>
-          <li>Critical Thinking</li>
-          <li>Fast Learner</li>
-          <li>Collaborative Nature</li>
-          
-        </ul>
-      </div>
-      
-    </div>
-
-    <div class="edu">
-      <h3 class="title">EDUCATION</h3>
-      <div class="edu_item">
-        <p class="item_preTitle">2018-2019</p>
-        <h4 class="item_title">SSLC</h4>
-        <p class="description">
-          Swastik Matriculation hr sec <br>89%
-        </p>
-      </div>
-      <div class="edu_item">
-        <p class="item_preTitle">2020-2021</p>
-        <h4 class="item_title">HSC</h4>
-        <p class="description">
-          Vighneswar Vidhya Mandhir Matric Hr Sec<br>92% 
-        </p>
-      </div>
-      <div class="edu_item">
-        <p class="item_preTitle">2021-2025</p>
-        <h4 class="item_title">Bachelor's Degree</h4>
-        <p class=" description">
-          Sri eshwar college of Engineering<br>83%
- 
-         </p>
-      </div>
-    </div>
-
-    <div class="certification">
-      <h3 class="title">INTERNSHIP</h3>
-      <div class="certification_item">
-        <p class="item_preTitle">2023</p>
-        
-        <p class="description">
-          Mernstack
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="group-2">
-    <div class="exp">
-      <h3 class="title">PROJECTS</h3>
-      <div class="exp_item">
-        <p class="item_preTitle">2021-2022</p>
-        <h4 class="item_title">Automatic Restaurent Menu Odering System</h4>
-        
-        <p class=" description">
-         Develped a hardware come software module which made the customers to ordered and 
-          enjoying the foods without waiting for the waiter's call.
-
-        </p>
-      </div>
-      <div class="exp_item">
-        <p class="item_preTitle">2022 - 2023</p>
-        <h4 class="item_title">Anti sleeping Alarm device</h4>
-        
-        <p class="description">
-          Develped a mini project which alarms the driver who sleep's and feel
-           drowsy while driving the car.
-        </p>
-      </div>
-    </div>
-    <div class="awards">
-      <h3 class="title">ACHIVEMENTS</h3>
-      <div class="awards_item">
-        <p class="item_preTitle">2022</p>
-        <h4 class="item_title"> 
-          Paper Presentation</h4>
-        <p class=" description">
-          Sucessfully presented the paper and won 2nd in a national level contest.
-        </p>
-      </div>
-      <div class="awards_item">
-        <p class="item_preTitle">2023</p>
-        <h4 class="item_title">Programming in Java </h4>
-        <p class="description">
-          Sucessfully completed the java programming in nptel and secured <bold>elite</bold> grade
-        </p>
-      </div>
-    </div>
-    <div class="group-1">
-      <div class="skills">
-        <h3 class="title">CODING PLATFORMS</h3>
-        <ul class="skills_list description">
-          <li>Skillrack</li>
-          <li>leetcode</li>
-          <li>codechef</li>
-          <li>Hakerrank</li>
-          
-        </ul>
-      </div>
-      
-    </div>
-
-    <div class="group-1">
-      <div class="skills">
-        <h3 class="title">AREA OF INTRESTS</h3>
-        <ul class="skills_list description">
-          <li>Web developement </li>
-          <li>Frontend developement</li>
-          <li>Internet of things</li>
-          
-          
-        </ul>
-      </div>
-      
-    </div>
-    
-     
-   </div>
-  <hr>
-  <div class="group-3">
-    <div class="contact">
-      <h3 class="title">CONTACT</h3>
-      <div class="contact_info">
-        <p class="description">
-          Coimbatore Tamilnadu
-        </p>
-        <p class="description">
-          +917305568086
-        </p>
-        <p class="description">
-          
-          vgowslya2003@gmail.com
-        </p>
-      </div>
-    </div>
-    <div class="social">
-      <h3 class="title">Socials</h3>
-      <div class="social_items">
-        <a href="#" target="_b" class="social_item">
-          <i data-feather="github"></i>
-          <span>https:/github.com/Gowsalyadevi2003</span>
-        </a>
-        
-        
-        <a href="#" target="_blank" class="social_item">
-          <i data-feather="linkedin"></i>
-          <span>/https://www.linkedin.com/in/gowsalya-devi-v-b635b4239/</span>
-        </a>
-      </div>
-    </div>
-  
-</div>
-<script>
-  feather.replace()
-</script>
 </body>
-
 </html>
-    
